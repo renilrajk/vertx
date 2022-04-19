@@ -1,0 +1,1 @@
+`echo "GET http://localhost:8888/assets" | vegeta attack -workers=4 -max-workers=10 -duration=10s | vegeta report`
