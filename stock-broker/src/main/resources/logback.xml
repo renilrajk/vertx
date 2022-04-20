@@ -6,11 +6,12 @@
     </encoder>
   </appender>
 
-  <logger name="com.renil.vertx" level="info" additivity="false">
-    <appender-ref ref="CONSOLE"/>
-  </logger>
+  <logger name="com.renil.vertx" level="debug" />
+  <logger name="io.netty" level="warn" />
+  <logger name="io.vertx" level="info" />
+  <logger name="org.flywaydb.core" level="info" />
 
-  <root level="error">
+  <root level="INFO">
     <appender-ref ref="CONSOLE"/>
   </root>
 

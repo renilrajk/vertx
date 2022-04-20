@@ -1,6 +1,5 @@
 package com.renil.vertx.stock.broker.config;
 
-import com.renil.vertx.stock.broker.model.BrokerConfig;
 import com.renil.vertx.stock.broker.util.Constants;
 import io.vertx.config.ConfigRetriever;
 import io.vertx.config.ConfigRetrieverOptions;
@@ -15,7 +14,14 @@ import java.util.List;
 public class ConfigLoader {
 
   public static final Future<BrokerConfig> load(Vertx vertx) {
-    final var EXPOSED_KEYS = List.of(Constants.SERVER_PORT);
+    final var EXPOSED_KEYS = List.of(
+      Constants.SERVER_PORT,
+      Constants.DB_HOST,
+      Constants.DB_PORT,
+      Constants.DB_DATABASE,
+      Constants.DB_USER,
+      Constants.DB_PASSWORD
+    );
     final var exposedKeys = new JsonArray();
     EXPOSED_KEYS.forEach(exposedKeys::add);
 

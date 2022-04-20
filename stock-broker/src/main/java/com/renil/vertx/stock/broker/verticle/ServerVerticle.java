@@ -1,12 +1,11 @@
 package com.renil.vertx.stock.broker.verticle;
 
-import com.renil.vertx.stock.broker.MainVerticle;
 import com.renil.vertx.stock.broker.api.AssetsApi;
 import com.renil.vertx.stock.broker.api.QuotesApi;
 import com.renil.vertx.stock.broker.api.WatchListApi;
 import com.renil.vertx.stock.broker.config.ConfigLoader;
 import com.renil.vertx.stock.broker.handler.FailureHandler;
-import com.renil.vertx.stock.broker.model.BrokerConfig;
+import com.renil.vertx.stock.broker.config.BrokerConfig;
 import io.vertx.core.AbstractVerticle;
 import io.vertx.core.Promise;
 import io.vertx.ext.web.Router;
